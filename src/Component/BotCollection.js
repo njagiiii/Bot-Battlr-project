@@ -1,24 +1,34 @@
 import React, { useEffect, useState } from "react";
 import BotMap from "./BotMap";
 import BotSpecs from "./BotSpecs";
+import SortBar from "./SortBar";
+import BotArmy from "./BotArmy";
 
 const BotCollection = () => {
-  //create the state of the current data
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); //create the state of the current data
+  const [selectedCard, setselectedCard] = useState(null); // create state of the selected card
 
-  // create state of the selected card
-     const [selectedCard , setselectedCard] = useState(null)
+  const handleClick = (card) => {
+    setselectedCard(card); //  function that handles the display of the selectedcard
+  };
 
-    //  function that handles the display of the selectedcard
-     const handleClick = (card) => {
-      setselectedCard(card)
-     }
+  const handleClose = () => {
+    setselectedCard(null); //  function to close the selected card
+  };
 
-    //  function to close the selected card
-     const handleClose = () => {
-      setselectedCard(null)
-     }
- 
+  const [enlistbot, setEnlistedbot] = useState([]); // state to manage the  enlisted bot
+
+   const handleenlistbutton = (card) => {
+    const BotEnlisted = enlistbot.every((enlist) => enlist.card_class === card.card_class);
+    if(BotEnlisted){
+      setEnlistedbot((previousenlistbot) => [...previousenlistbot, card])
+    }
+     
+   };
+   const buttoncloseenlist = (bots) => {
+    setEnlistedbot((previousenlistbot) => previousenlistbot.filter((bot)=> bot.id !== bots.id));
+   }
+
   //Fetch data
   const fetchData = () => {
     fetch("http://localhost:3000/bots")
@@ -33,12 +43,14 @@ const BotCollection = () => {
 
   return (
     <div>
+      <BotArmy onCardClose={buttoncloseenlist} card={enlistbot}/>
       {/* if card is selected render on the BotSpecs */}
       {selectedCard ? (
-        <BotSpecs card={selectedCard}  onClose={handleClose}/>
+        <BotSpecs card={selectedCard} onClose={handleClose} onClick={handleenlistbutton} />
       ) : (
-        <BotMap data={data} onCardClick={handleClick}/>
-      )}     
+        <BotMap data={data} onCardClick={handleClick} />
+      )}
+      <SortBar data={data} setData={setData} />
     </div>
   );
 };

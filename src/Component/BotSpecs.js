@@ -1,10 +1,13 @@
 import React from "react";
 
-const BotSpecs = ({ card, onClose }) => {
+const BotSpecs = ({ card, onClose, onClick }) => {
+  const handleEnlistClick = () => {
+    onClick(card);
+  }
   return (
     <div
       className="card mb-3"
-      style={{ maxWidth: "540px",marginTop:"500px", marginLeft:"1000px"}}
+      style={{ maxWidth: "540px",marginTop:"80px", marginLeft:"1000px"}}
     >
       <div className="row g-0">
         <div className="col-md-4">
@@ -44,6 +47,8 @@ const BotSpecs = ({ card, onClose }) => {
               <span style={{ fontSize: "15px", marginLeft: "5px" }}>
                 {card.armor}
               </span>
+
+              <span style={{marginInline:"20px", width:"100px"}}><button type="button" class="btn btn-primary" onClick={handleEnlistClick} style={{marginTop:"20px"}}>Enlist</button></span>
               <span><button type="button" class="btn btn-primary" onClick={onClose} style={{marginTop:"20px"}}>Go Back</button></span>
             </div>
           </div>

@@ -5,7 +5,7 @@ import BotCard from "./BotCard";
 const BotMap = ({ data, onCardClick}) => {
   return (
     //  map through the data we have fetched
-    <div style={{ marginTop: "150px" }}>
+    <div style={{ marginTop: "20px" }}>
       {data.map((item) => (
         <BotCard
          onClick={() => onCardClick(item)}

@@ -1,21 +1,25 @@
-import React from "react";
+import React  from "react";
 import BotCard from "./BotCard";
 
-const BotMap = ({ data }) => {
+
+const BotMap = ({ data, onCardClick}) => {
   return (
     //  map through the data we have fetched
-    <div>
+    <div style={{ marginTop: "150px" }}>
       {data.map((item) => (
         <BotCard
+         onClick={() => onCardClick(item)}
           key={item.id}
           image={item.avatar_url}
           name={item.name}
           phrase={item.catchphrase}
-          health ={item.health}
+          health={item.health}
           damage={item.damage}
           armor={item.armor}
         />
       ))}
+      
+      
     </div>
   );
 };

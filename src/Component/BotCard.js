@@ -1,11 +1,17 @@
 import React from "react";
 
-const BotCard = ({ image, name, phrase, health, damage, armor }) => {
+const BotCard = ({ image, name, phrase, health, damage, armor,onClick }) => {
+//  function that handles the click
+ const handleBotClick = () =>{
+  onClick();
+ }
+   
   return (
     // display the details in a card
     <div
       className="card mb-3"
       style={{ maxWidth: "18rem", marginLeft: "120px" }}
+      onClick={handleBotClick}
     >
       <img
         src={image}

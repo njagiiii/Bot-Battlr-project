@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
 const BotArmy = () => {
   return (
-    <div>
-        
-     </div>
-  )
-}
+    <div>  
+    </div>
+  );
+};
 
 export default BotArmy;

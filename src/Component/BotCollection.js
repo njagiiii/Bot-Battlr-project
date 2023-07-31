@@ -43,14 +43,16 @@ const BotCollection = () => {
 
   return (
     <div>
+
       <BotArmy onCardClose={buttoncloseenlist} card={enlistbot}/>
+      <SortBar data={data} setData={setData} />
       {/* if card is selected render on the BotSpecs */}
       {selectedCard ? (
         <BotSpecs card={selectedCard} onClose={handleClose} onClick={handleenlistbutton} />
       ) : (
         <BotMap data={data} onCardClick={handleClick} />
       )}
-      <SortBar data={data} setData={setData} />
+     
     </div>
   );
 };

@@ -12,11 +12,13 @@ const SortBar = ({data,setData}) => {
        const handleDamage = () => {
         const sortedDamage = [...data];
         sortedDamage.sort((a,b) => b.damage - a.damage); //sort in descending order
+        setData(sortedDamage);
        }
        
   return (
-    <div>
-        
+    <div style={{textAlign:"center"}}>
+       <button type="button" className="btn btn-primary" onClick={ handleHealth} style={{marginTop:"30px"}}>Health</button>
+       <button type="button" className="btn btn-primary" onClick={ handleDamage} style={{marginTop:"30px", marginInline:"20px"}}>Damage</button>
     </div>
   )
 }

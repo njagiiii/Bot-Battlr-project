@@ -6,13 +6,13 @@ const BotArmy = ({ card, onCardClose }) => {
   };
   return (
     <div style={{ backgroundColor: "greenyellow", height: "600px" }}>
-      <h2>Your Bot Army</h2>
+      <h2 style={{textAlign:"center"}}>Your Bot Army</h2>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {card.length === 0 ? (
-          <p>Your bot army is empty.</p>
+          <p >Your bot army is empty.</p>
         ) : (
           card.map((bot) => (
-            <div key={bot.id} style={{ marginLeft: "30px", flexBasis:'10%' }}>
+            <div key={bot.id} style={{ marginLeft: "30px"}}>
               <img
                 src={bot.avatar_url}
                 alt={bot.name}

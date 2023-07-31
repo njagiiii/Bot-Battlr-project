@@ -4,7 +4,7 @@ const SortBar = ({data,setData}) => {
     // function that sorts by health
       const handleHealth = () => {
         const sortedHealth = [...data] // create a copy of array data
-        sortedHealth.sort((a,b)=> b.health - a.health); //sort in descending order
+        sortedHealth.sort((a,b)=> a.health - b.health); //sort in ascending order
         setData(sortedHealth);
       }
 

@@ -1,5 +1,6 @@
 ### Bot Battlr
    Bot Battlr is a React application that displays a list of bots, among other features.
+   ![checkpoint demo](https://curriculum-content.s3.amazonaws.com/phase-2/phase-2-hooks-code-challenge-bot-battlr/checkpoint_demo.gif)
 
 ### Learning Goals
    implementing a mini web app to practice on React:

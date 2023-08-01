@@ -31,7 +31,7 @@ const BotCollection = () => {
 
   //Fetch data
   const fetchData = () => {
-    fetch("http://localhost:3000/bots")
+    fetch("https://bot-x0k6.onrender.com/bots")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.log("Error fetching", error));

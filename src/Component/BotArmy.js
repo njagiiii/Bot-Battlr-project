@@ -5,7 +5,7 @@ const BotArmy = ({ card, onCardClose }) => {
     onCardClose(bot);
   };
   return (
-    <div style={{ backgroundColor: "greenyellow", height: "600px" }}>
+    <div style={{ backgroundColor: "greenyellow", height: "600px"}}>
       <h2 style={{textAlign:"center"}}>Your Bot Army</h2>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {card.length === 0 ? (

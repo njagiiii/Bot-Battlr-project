@@ -10,14 +10,14 @@ const BotCard = ({ image, name, phrase, health, damage, armor,onClick }) => {
     // display the details in a card
     <div
       className="card mb-3"
-      style={{ maxWidth: "18rem", marginLeft: "120px" }}
+      style={{ maxWidth: "23rem", marginLeft: "190px", marginBottom: "40px", border: "solid 0.5px" }}
       onClick={handleBotClick}
     >
       <img
         src={image}
         alt={name}
         className="card-img-top"
-        style={{ backgroundColor: "grey" }}
+        style={{ backgroundColor: "grey", width: "290px", marginLeft: "34px", marginTop: "20px" }}
       />
 
       {/*create a card body */}
@@ -25,7 +25,7 @@ const BotCard = ({ image, name, phrase, health, damage, armor,onClick }) => {
         <h2 className="card-name" style={{ marginLeft: "70px" }}>
           {name}
         </h2>
-        <p className="card-text">{phrase}</p>
+        <p className="card-text" style={{marginLeft: "30px"}}>{phrase}</p>
         <hr></hr>
 
         {/* create a div for icons */}

@@ -7,7 +7,7 @@ const BotSpecs = ({ card, onClose, onClick }) => {
   return (
     <div
       className="card mb-3"
-      style={{ maxWidth: "540px",marginTop:"80px", marginLeft:"1000px"}}
+      style={{ maxWidth: "540px",marginTop:"80px", marginLeft:"800px"}}
     >
       <div className="row g-0">
         <div className="col-md-4">
@@ -19,15 +19,15 @@ const BotSpecs = ({ card, onClose, onClick }) => {
           />
         </div>
         <div className="col-md-8">
-          <div className="card-body" style={{marginLeft:"100px"}}>
-            <h2 className="card-name" style={{ marginLeft: "70px" }}>
+          <div className="card-body">
+            <h2 className="card-name" style={{ marginLeft: "10px" }}>
               {card.name}
             </h2>
             <p className="card-text">{card.catchphrase}</p>
             
 
             {/* create a div for icons */}
-            <div style={{ marginLeft: "50px" }}>
+            <div style={{ marginLeft: "10px" }}>
               <i
                 className="fas fa-heartbeat"
                 style={{ fontSize: "12px", marginRight: "5px" }}
@@ -46,10 +46,10 @@ const BotSpecs = ({ card, onClose, onClick }) => {
               ></i>
               <span style={{ fontSize: "15px", marginLeft: "5px" }}>
                 {card.armor}
-              </span>
+              </span><br></br>
 
-              <span style={{marginInline:"20px", width:"100px"}}><button type="button" class="btn btn-primary" onClick={handleEnlistClick} style={{marginTop:"20px"}}>Enlist</button></span>
-              <span><button type="button" class="btn btn-primary" onClick={onClose} style={{marginTop:"20px"}}>Go Back</button></span>
+              <span style={{marginInline:"20px", width:"100px"}}><button type="button" class="btn btn-primary" onClick={handleEnlistClick} style={{marginTop:"20px", backgroundColor: "lime", fontSize: "20px", padding: "6px"}}>Enlist</button></span>
+              <span><button type="button" class="btn btn-primary" onClick={onClose} style={{marginTop:"20px", backgroundColor: "red", fontSize: "20px", padding: "6px"}}>Go Back</button></span>
             </div>
           </div>
         </div>

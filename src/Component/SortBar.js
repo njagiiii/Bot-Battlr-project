@@ -17,8 +17,8 @@ const SortBar = ({data,setData}) => {
        
   return (
     <div style={{textAlign:"center"}}>
-       <button type="button" className="btn btn-primary" onClick={ handleHealth} style={{marginTop:"30px"}}>Health</button>
-       <button type="button" className="btn btn-primary" onClick={ handleDamage} style={{marginTop:"30px", marginInline:"20px"}}>Damage</button>
+       <button type="button" className="btn btn-primary" onClick={ handleHealth} style={{marginTop:"30px", backgroundColor: "#c1c1c1", fontSize: "20px", padding: "6px"}}>Health</button>
+       <button type="button" className="btn btn-primary" onClick={ handleDamage} style={{marginTop:"30px", marginInline:"20px", backgroundColor: "#c1c1c1", fontSize: "20px", padding: "6px"}}>Damage</button>
     </div>
   )
 }
